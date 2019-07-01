@@ -27,7 +27,10 @@
 \section{Supuestos de las Edades Fraccionarias}
 
 \subsection{Distribuci\'on Uniforme de las muertes}
+
 \subsection{Fuerza de Mortalidad constante}
+
+Es el segundo supuesto se basa en que la fuerza de mortalidad $\mu$ es constante entre el rango de edades enteras. Es decir para una edad exacta x y en un rango de 0 <= x < 1, se asume que la fuerza de mortalidad $\mu_{x+s}$ no depende del valor de s. 
 
 
 \subsection{Supuesto Balducci}
