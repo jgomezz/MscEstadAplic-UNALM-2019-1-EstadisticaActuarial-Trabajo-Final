@@ -1,0 +1,40 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[spanish]{babel} 
+\usepackage{actuarialangle}
+\usepackage{actuarialsymbol}
+ 
+\title{UNALM - Maestr\'ia en Estad\'istica Aplicada \ Trabajo Final : Fraccional}
+\author{Jaime G\'omez Mar\'in - Roberto Le\'on - Guillermo Zu\~niga}
+\date{3 Julio 2019}
+
+\begin{document}
+\maketitle
+\tableofcontents  
+
+\SweaveOpts{concordance=TRUE}
+
+\chapter{Presentaci\'on}
+
+\chapter{Introducci\'on}
+
+\chapter{Marco Te\'orico}
+
+\section{Supuestos de las Edades Fraccionarias}
+
+\subsection{Distribuci\'on Uniforme de las muertes}
+\subsection{Fuerza de Mortalidad constante}
+
+
+\subsection{Supuesto Balducci}
+
+\chapter{Aplicaci\'on}
+
+\chapter{Conclusiones}
+
+\chapter{ Bibliograf\'ia}
+
+\end{document}
