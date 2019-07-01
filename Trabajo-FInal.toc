@@ -1,0 +1,11 @@
+\babel@toc {spanish}{}
+\contentsline {chapter}{\numberline {1}Presentaci\'on}{2}% 
+\contentsline {chapter}{\numberline {2}Introducci\'on}{3}% 
+\contentsline {chapter}{\numberline {3}Marco Te\'orico}{4}% 
+\contentsline {section}{\numberline {3.1}Supuestos de las Edades Fraccionarias}{4}% 
+\contentsline {subsection}{\numberline {3.1.1}Distribuci\'on Uniforme de las muertes}{4}% 
+\contentsline {subsection}{\numberline {3.1.2}Fuerza de Mortalidad constante}{4}% 
+\contentsline {subsection}{\numberline {3.1.3}Supuesto Balducci}{4}% 
+\contentsline {chapter}{\numberline {4}Aplicaci\'on}{5}% 
+\contentsline {chapter}{\numberline {5}Conclusiones}{6}% 
+\contentsline {chapter}{\numberline {6} Bibliograf\'ia}{7}% 
