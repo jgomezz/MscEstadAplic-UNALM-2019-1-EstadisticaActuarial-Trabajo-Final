@@ -6,7 +6,7 @@
 \usepackage[spanish]{babel} 
 \usepackage{actuarialangle}
 \usepackage{actuarialsymbol}
-
+ 
 \title{UNALM - Maestr\'ia en Estad\'istica Aplicada \ Trabajo Final : Fraccional}
 \author{Jaime G\'omez Mar\'in - Roberto Le\'on - Guillermo Zu\~niga}
 \date{3 Julio 2019}
