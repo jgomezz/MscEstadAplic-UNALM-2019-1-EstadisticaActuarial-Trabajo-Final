@@ -98,7 +98,35 @@ Procedemos a integrar entre $x_0 < X < x_0 + t$ :
 \addtocounter{neq}{1}
 \end{equation}
 
-Es el segundo supuesto se basa en que la fuerza de mortalidad $\mu$ es constante entre el rango de edades enteras; es decir para una edad exacta x en un rango de $0 \leq x < 1$, se asume que la fuerza de mortalidad $\mu_{x+s}$ no depende del valor de s. 
+
+Aplicando ahora el segundo supuesto de Fuerza de Mortalidad constante el cual indica que la fuerza de mortalidad  $\mu$ es constante entre el rango de edades enteras; es decir para una edad exacta $x_o$ en un rango de $x_0 \leq X < x_0 + t $ la fuerza de mortalidad no cambia, es decir que la fuerza de mortalidad $\mu_{x_0}$ no depende del valor de t siempre y cuando t este entre los rangos de  $0 < t < 1$
+
+En la ecuaci\'on anterior usamos el segundo supuesto 
+
+
+\begin{equation}
+\int_{x_0}^{x_0+1}u_x^*dx
+=  ln( S(x_0))  - ln(S(x_0+1)) 
+\addtocounter{neq}{1}
+\end{equation}
+
+\begin{equation}
+u_x^*(x_0+1-x_0)
+=  ln( S(x_0))  - ln(S(x_0+1)) 
+\addtocounter{neq}{1}
+\end{equation}
+
+\begin{equation}
+u_x^*
+=  ln( S(x_0))  - ln(S(x_0+1)) 
+\addtocounter{neq}{1}
+\end{equation}
+
+En la ecuaci\'on anterior:
+
+
+
+
 
 \subsection{Supuesto Balducci}
 
