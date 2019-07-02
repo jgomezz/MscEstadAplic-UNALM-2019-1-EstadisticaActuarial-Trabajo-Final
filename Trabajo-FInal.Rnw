@@ -51,23 +51,23 @@ P(x < X < x + \Delta x | X > x) = \frac{F(x + \Delta x ) - F(x)}{1 - F(x)}
 
 reemplazando:
 
-\begin{equation}
+\begin{equation*}
 u_x 
 = \lim_{\Delta x \rightarrow 0 } \frac{F(x + \Delta x ) - F(x) }{\Delta x *(1 - F(x)) } 
 \addtocounter{neq}{1}
-\end{equation}
+\end{equation*}
 
-\begin{equation}
+\begin{equation*}
 u_x
 = \frac{1}{(1 - F(x))}*\lim_{\Delta x \rightarrow 0 } \frac{F(x + \Delta x ) - F(x) }{\Delta x}
 \addtocounter{neq}{1}
-\end{equation}
+\end{equation*}
 
-\begin{equation}
+\begin{equation*}
 u_x
 = \frac{1}{(1 - F(x))}*F'(x)
 \addtocounter{neq}{1}
-\end{equation}
+\end{equation*}
 
 \begin{equation}
 u_x
@@ -75,14 +75,14 @@ u_x
 \addtocounter{neq}{1}
 \end{equation}
 
-Se sabe que:
+se sabe que:
 
-\begin{equation}
+\begin{equation*}
 S(x) =  1 - F(x)     
 \addtocounter{neq}{1}
-\end{equation}
+\end{equation*}
 
-Reemplazando:
+reemplazando:
 \begin{equation}
 u_x
 = -\frac{S'(x)}{S(x)} 
@@ -90,64 +90,72 @@ u_x
 \addtocounter{neq}{1}
 \end{equation}
 
+
+\hfill \break
 Procedemos a integrar entre $x_0 < X < x_0 + t$ :
 
 \begin{equation}
+\label{eqn:ecFuerzaMortalidad}
 \int_{x_0}^{x_0+t}u_xdx
 =  ln( S(x_0))  - ln(S(x_0+t)) 
 \addtocounter{neq}{1}
 \end{equation}
 
+\paragraph{Segundo supuesto : \textit{Fuerza de Mortalidad Constante}.}El  supuesto consiste en que la fuerza de mortalidad  $\mu$ se mantiene constante entre un rango de edades exactas; es decir para una edad exacta $x_o$, se tiene una variable X dentro de un rango de $x_0 \leq X < x_0 + t $ donde la fuerza de mortalidad no cambia. Lo anterior significa que la fuerza de mortalidad $\mu_{x_0}$ no depende del valor de t siempre y cuando t este entre los rangos de  $0 < t < 1$. A esta Fuerza de Mortalidad constante la vamos a denominar $\mu_x^*$. \\ 
 
-Aplicando ahora el segundo supuesto de Fuerza de Mortalidad constante el cual indica que la fuerza de mortalidad  $\mu$ es constante entre el rango de edades enteras; es decir para una edad exacta $x_o$ en un rango de $x_0 \leq X < x_0 + t $ la fuerza de mortalidad no cambia, es decir que la fuerza de mortalidad $\mu_{x_0}$ no depende del valor de t siempre y cuando t este entre los rangos de  $0 < t < 1$
+En la ecuaci\'on  \ref{eqn:ecFuerzaMortalidad} aplicamos el segundo supuesto 
+\begin{equation*}
+\int_{x_0}^{x_0+1}\mu_x^*dx
+=  ln( S(x_0))  - ln(S(x_0+1)) 
+\addtocounter{neq}{1}
+\end{equation*}
 
-En la ecuaci\'on anterior usamos el segundo supuesto 
-
+\begin{equation*}
+\mu_x^*(x_0+1-x_0)
+=  ln( S(x_0))  - ln(S(x_0+1)) 
+\addtocounter{neq}{1}
+\end{equation*}
 
 \begin{equation}
-\int_{x_0}^{x_0+1}u_x^*dx
+\label{eqn:ecFuerzaMortalidadConstante}
+\mu_x^*
 =  ln( S(x_0))  - ln(S(x_0+1)) 
 \addtocounter{neq}{1}
 \end{equation}
 
-\begin{equation}
-u_x^*(x_0+1-x_0)
-=  ln( S(x_0))  - ln(S(x_0+1)) 
-\addtocounter{neq}{1}
-\end{equation}
+En la ecuaci\'on  \ref{eqn:ecFuerzaMortalidad} aplicamos el segundo supuesto para un periodo de tiempo t 
 
-\begin{equation}
-u_x^*
-=  ln( S(x_0))  - ln(S(x_0+1)) 
-\addtocounter{neq}{1}
-\end{equation}
-
-En la ecuaci\'on anterior:
-
-
-\begin{equation}
-u_x^*t
+\begin{equation*}
+\int_{x_0}^{x_0+t}\mu_x^*dx
 =  ln( S(x_0))  - ln(S(x_0+t)) 
 \addtocounter{neq}{1}
-\end{equation}
+\end{equation*}
 
-\begin{equation}
-ln(S(x_0+t))
-=  ln( S(x_0))  - u_x^*t  
+\begin{equation*}
+\mu_x^*t
+=  ln( S(x_0))  - ln(S(x_0+t)) 
 \addtocounter{neq}{1}
-\end{equation}
+\end{equation*}
 
-\begin{equation}
+\begin{equation*}
+ln(S(x_0+t))
+=  ln( S(x_0))  - \mu_x^*t  
+\addtocounter{neq}{1}
+\end{equation*}
+
+\begin{equation*}
 ln(S(x_0+t))
 =  ln(S(x_0))  - (ln(S(x_0))  - ln(S(x_0+1)))t  
 \addtocounter{neq}{1}
-\end{equation}
+\end{equation*}
 
 \begin{equation}
 ln(S(x_0+t))
 =  (1-t)ln(S(x_0))  + t*ln(S(x_0+1))  
 \addtocounter{neq}{1}
 \end{equation}
+
+
 
 \subsection{Supuesto Balducci}
 
