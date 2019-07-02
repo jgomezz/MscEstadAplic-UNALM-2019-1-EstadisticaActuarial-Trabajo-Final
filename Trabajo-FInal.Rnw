@@ -7,6 +7,10 @@
 \usepackage{actuarialangle}
 \usepackage{actuarialsymbol}
 
+\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
+%\renewcommand{\theequation}{\arabic{equation}}
+\newcounter{neq}
+
 \title{UNALM - Maestr\'ia en Estad\'istica Aplicada \ Trabajo Final : Fraccional}
 \author{Jaime G\'omez Mar\'in - Roberto Le\'on - Guillermo Zu\~niga}
 
@@ -25,13 +29,76 @@
 \chapter{Marco Te\'orico}
 
 \section{Supuestos de las Edades Fraccionarias}
+\setcounter{equation}{0}
 
 \subsection{Distribuci\'on Uniforme de las muertes}
 
 \subsection{Fuerza de Mortalidad constante}
 
-Es el segundo supuesto se basa en que la fuerza de mortalidad $\mu$ es constante entre el rango de edades enteras. Es decir para una edad exacta x y en un rango de 0 <= x < 1, se asume que la fuerza de mortalidad $\mu_{x+s}$ no depende del valor de s. 
+Partamos de la definici\'on de fuerza de mortalidad: "\textit{en estad\'istica actuarial representa la tasa de mortalidad instantanea a una cierta edad dentro una base anualizada}"
 
+\begin{equation}
+u_x = \lim_{\Delta x \rightarrow 0 } \frac{P(x < X < x + \Delta x | X > x) }{\Delta x}
+\addtocounter{neq}{1}
+\end{equation}
+
+recordando que:
+
+\begin{equation}
+P(x < X < x + \Delta x | X > x) = \frac{F(x + \Delta x ) - F(x)}{1 - F(x)}
+\addtocounter{neq}{1}
+\end{equation}
+
+reemplazando:
+
+\begin{equation}
+u_x 
+= \lim_{\Delta x \rightarrow 0 } \frac{F(x + \Delta x ) - F(x) }{\Delta x *(1 - F(x)) } 
+\addtocounter{neq}{1}
+\end{equation}
+
+\begin{equation}
+u_x
+= \frac{1}{(1 - F(x))}*\lim_{\Delta x \rightarrow 0 } \frac{F(x + \Delta x ) - F(x) }{\Delta x}
+\addtocounter{neq}{1}
+\end{equation}
+
+\begin{equation}
+u_x
+= \frac{1}{(1 - F(x))}*F'(x)
+\addtocounter{neq}{1}
+\end{equation}
+
+\begin{equation}
+u_x
+= \frac{F'(x)}{1 - F(x)}
+\addtocounter{neq}{1}
+\end{equation}
+
+Se sabe que:
+
+\begin{equation}
+S(x) =  1 - F(x)     
+\addtocounter{neq}{1}
+\end{equation}
+
+Reemplazando:
+\begin{equation}
+u_x
+= -\frac{S'(x)}{S(x)} 
+= - \frac{d}{dx}ln(S(x))
+\addtocounter{neq}{1}
+\end{equation}
+
+Procedemos a integrar entre $x_0 < X < x_0 + t$ :
+
+\begin{equation}
+\int_{x_0}^{x_0+t}u_xdx
+=  ln( S(x_0))  - ln(S(x_0+t)) 
+\addtocounter{neq}{1}
+\end{equation}
+
+Es el segundo supuesto se basa en que la fuerza de mortalidad $\mu$ es constante entre el rango de edades enteras; es decir para una edad exacta x en un rango de $0 \leq x < 1$, se asume que la fuerza de mortalidad $\mu_{x+s}$ no depende del valor de s. 
 
 \subsection{Supuesto Balducci}
 
