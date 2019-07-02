@@ -125,8 +125,29 @@ u_x^*
 En la ecuaci\'on anterior:
 
 
+\begin{equation}
+u_x^*t
+=  ln( S(x_0))  - ln(S(x_0+t)) 
+\addtocounter{neq}{1}
+\end{equation}
 
+\begin{equation}
+ln(S(x_0+t))
+=  ln( S(x_0))  - u_x^*t  
+\addtocounter{neq}{1}
+\end{equation}
 
+\begin{equation}
+ln(S(x_0+t))
+=  ln(S(x_0))  - (ln(S(x_0))  - ln(S(x_0+1)))t  
+\addtocounter{neq}{1}
+\end{equation}
+
+\begin{equation}
+ln(S(x_0+t))
+=  (1-t)ln(S(x_0))  + t*ln(S(x_0+1))  
+\addtocounter{neq}{1}
+\end{equation}
 
 \subsection{Supuesto Balducci}
 
