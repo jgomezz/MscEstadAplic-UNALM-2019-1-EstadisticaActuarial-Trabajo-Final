@@ -34,7 +34,7 @@
 
 \subsection{Fuerza de Mortalidad constante}
 
-Partamos de la definici\'on de fuerza de mortalidad: "\textit{en estad\'istica actuarial representa la tasa de mortalidad instantanea a una cierta edad dentro una base anualizada}"
+Partamos de la definici\'on de fuerza de mortalidad: \cite{TheForceOfMortality2013} "\textit{En estad\'istica actuarial representa la tasa de mortalidad instantanea a una cierta edad dentro una base anualizada}"
 
 \begin{equation}
 u_x = \lim_{\Delta x \rightarrow 0 } \frac{P(x < X < x + \Delta x | X > x) }{\Delta x}
@@ -167,7 +167,6 @@ ln(S(x_0+t))
 \chapter{Aplicaci\'on}
 
 \chapter{Conclusiones}
-Here is one citation \cite{GreentargetEngagement2012} and
 
 
 \printbibliography[
