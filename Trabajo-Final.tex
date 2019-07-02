@@ -1,0 +1,181 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+%\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[spanish]{babel} 
+\usepackage{actuarialangle}
+\usepackage{actuarialsymbol}
+\usepackage[backend=bibtex]{biblatex}
+
+\addbibresource{includes/bibliografia.bib}
+
+\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
+\newcounter{neq}
+
+\usepackage{Sweave}
+\begin{document}
+
+\include{includes/portada}
+
+\tableofcontents  
+
+\input{Trabajo-Final-concordance}
+
+\chapter{Presentaci\'on}
+
+\chapter{Introducci\'on}
+
+\chapter{Marco Te\'orico}
+
+\section{Supuestos de las Edades Fraccionarias}
+\setcounter{equation}{0}
+
+\subsection{Distribuci\'on Uniforme de las muertes}
+
+\subsection{Fuerza de Mortalidad constante}
+
+Partamos de la definici\'on de fuerza de mortalidad: \cite{TheForceOfMortality2013} "\textit{En estad\'istica actuarial representa la tasa de mortalidad instantanea a una cierta edad dentro una base anualizada}"
+
+\begin{equation}
+u_x = \lim_{\Delta x \rightarrow 0 } \frac{P(x < X < x + \Delta x | X > x) }{\Delta x}
+\addtocounter{neq}{1}
+\end{equation}
+
+recordando que:
+
+\begin{equation}
+P(x < X < x + \Delta x | X > x) = \frac{F(x + \Delta x ) - F(x)}{1 - F(x)}
+\addtocounter{neq}{1}
+\end{equation}
+
+reemplazando:
+
+\begin{equation*}
+u_x 
+= \lim_{\Delta x \rightarrow 0 } \frac{F(x + \Delta x ) - F(x) }{\Delta x *(1 - F(x)) } 
+\addtocounter{neq}{1}
+\end{equation*}
+
+\begin{equation*}
+u_x
+= \frac{1}{(1 - F(x))}*\lim_{\Delta x \rightarrow 0 } \frac{F(x + \Delta x ) - F(x) }{\Delta x}
+\addtocounter{neq}{1}
+\end{equation*}
+
+\begin{equation*}
+u_x
+= \frac{1}{(1 - F(x))}*F'(x)
+\addtocounter{neq}{1}
+\end{equation*}
+
+\begin{equation}
+u_x
+= \frac{F'(x)}{1 - F(x)}
+\addtocounter{neq}{1}
+\end{equation}
+
+se sabe que:
+
+\begin{equation*}
+1 - F(x) = S(x)   
+\addtocounter{neq}{1}
+\end{equation*}
+
+\begin{equation*}
+F'(x) =  -S'(x)     
+\addtocounter{neq}{1}
+\end{equation*}
+
+
+reemplazando:
+\begin{equation}
+u_x
+= -\frac{S'(x)}{S(x)} 
+= - \frac{d}{dx}ln(S(x))
+\addtocounter{neq}{1}
+\end{equation}
+
+
+\hfill \break
+Procedemos a integrar entre $x_0 < X < x_0 + t$ :
+
+\begin{equation}
+\label{eqn:ecFuerzaMortalidad}
+\int_{x_0}^{x_0+t}u_xdx
+=  ln( S(x_0))  - ln(S(x_0+t)) 
+\addtocounter{neq}{1}
+\end{equation}
+
+\paragraph{Segundo supuesto : \textit{Fuerza de Mortalidad Constante}.}El  supuesto consiste en que la fuerza de mortalidad  $\mu$ se mantiene constante entre un rango de edades exactas; es decir para una edad exacta $x_o$, se tiene una variable X dentro de un rango de $x_0 \leq X < x_0 + t $ donde la fuerza de mortalidad no cambia. Lo anterior significa que la fuerza de mortalidad $\mu_{x_0}$ no depende del valor de t siempre y cuando t este entre los rangos de  $0 < t < 1$. A esta Fuerza de Mortalidad constante la vamos a denominar $\mu_x^*$. \\ 
+
+En la ecuaci\'on  \ref{eqn:ecFuerzaMortalidad} aplicamos el segundo supuesto 
+\begin{equation*}
+\int_{x_0}^{x_0+1}\mu_x^*dx
+=  ln( S(x_0))  - ln(S(x_0+1)) 
+\addtocounter{neq}{1}
+\end{equation*}
+
+\begin{equation*}
+\mu_x^*(x_0+1-x_0)
+=  ln( S(x_0))  - ln(S(x_0+1)) 
+\addtocounter{neq}{1}
+\end{equation*}
+
+\begin{equation}
+\label{eqn:ecFuerzaMortalidadConstante}
+\mu_x^*
+=  ln( S(x_0))  - ln(S(x_0+1)) 
+\addtocounter{neq}{1}
+\end{equation}
+
+En la ecuaci\'on  \ref{eqn:ecFuerzaMortalidad} aplicamos el segundo supuesto para un periodo de tiempo t 
+
+\begin{equation*}
+\int_{x_0}^{x_0+t}\mu_x^*dx
+=  ln( S(x_0))  - ln(S(x_0+t)) 
+\addtocounter{neq}{1}
+\end{equation*}
+
+\begin{equation*}
+\mu_x^*t
+=  ln( S(x_0))  - ln(S(x_0+t)) 
+\addtocounter{neq}{1}
+\end{equation*}
+
+\begin{equation*}
+ln(S(x_0+t))
+=  ln( S(x_0))  - \mu_x^*t  
+\addtocounter{neq}{1}
+\end{equation*}
+
+\begin{equation*}
+ln(S(x_0+t))
+=  ln(S(x_0))  - (ln(S(x_0))  - ln(S(x_0+1)))t  
+\addtocounter{neq}{1}
+\end{equation*}
+
+\begin{equation}
+ln(S(x_0+t))
+=  (1-t)ln(S(x_0))  + t*ln(S(x_0+1))  
+\addtocounter{neq}{1}
+\end{equation}
+
+
+
+\subsection{Supuesto Balducci}
+
+\chapter{Aplicaci\'on}
+
+\chapter{Conclusiones}
+
+
+\printbibliography[
+heading=bibintoc,
+title={Bibliograf\'ia}
+]
+
+\printbibliography[heading=subbibintoc,type=article,title={Articles only}]
+
+
+\end{document}
