@@ -1,11 +1,14 @@
 \documentclass[12pt]{report}
 \usepackage[utf8]{inputenc}
-\usepackage{natbib}
+%\usepackage{natbib}
 \usepackage{graphicx}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[spanish]{babel} 
 \usepackage{actuarialangle}
 \usepackage{actuarialsymbol}
+\usepackage[backend=bibtex]{biblatex}
+
+\addbibresource{includes/bibliografia.bib}
 
 \renewcommand{\theequation}{\thesubsection.\arabic{equation}}
 \newcounter{neq}
@@ -164,7 +167,15 @@ ln(S(x_0+t))
 \chapter{Aplicaci\'on}
 
 \chapter{Conclusiones}
+Here is one citation \cite{GreentargetEngagement2012} and
 
-\chapter{ Bibliograf\'ia}
+
+\printbibliography[
+heading=bibintoc,
+title={Bibliograf\'ia}
+]
+
+\printbibliography[heading=subbibintoc,type=article,title={Articles only}]
+
 
 \end{document}
