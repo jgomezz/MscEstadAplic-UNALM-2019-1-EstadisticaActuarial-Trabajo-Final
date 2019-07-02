@@ -8,16 +8,12 @@
 \usepackage{actuarialsymbol}
 
 \renewcommand{\theequation}{\thesubsection.\arabic{equation}}
-%\renewcommand{\theequation}{\arabic{equation}}
 \newcounter{neq}
 
-\title{UNALM - Maestr\'ia en Estad\'istica Aplicada \ Trabajo Final : Fraccional}
-\author{Jaime G\'omez Mar\'in - Roberto Le\'on - Guillermo Zu\~niga}
-
-\date{3 Julio 2019}
-
 \begin{document}
-\maketitle
+
+\include{includes/portada}
+
 \tableofcontents  
 
 \SweaveOpts{concordance=TRUE}
@@ -78,9 +74,15 @@ u_x
 se sabe que:
 
 \begin{equation*}
-S(x) =  1 - F(x)     
+1 - F(x) = S(x)   
 \addtocounter{neq}{1}
 \end{equation*}
+
+\begin{equation*}
+F'(x) =  -S'(x)     
+\addtocounter{neq}{1}
+\end{equation*}
+
 
 reemplazando:
 \begin{equation}
