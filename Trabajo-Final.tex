@@ -13,13 +13,14 @@
 \renewcommand{\theequation}{\thesubsection.\arabic{equation}}
 \newcounter{neq}
 
+\usepackage{Sweave}
 \begin{document}
 
 \include{includes/portada}
 
 \tableofcontents  
 
-\SweaveOpts{concordance=TRUE}
+\input{Trabajo-Final-concordance}
 
 \chapter{Presentaci\'on}
 
