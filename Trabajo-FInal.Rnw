@@ -68,7 +68,6 @@ u_x
 \addtocounter{neq}{1}
 \end{equation*}
 
-\begin{equation}
 u_x
 = \frac{F'(x)}{1 - F(x)}
 \addtocounter{neq}{1}
@@ -77,6 +76,7 @@ u_x
 se sabe que:
 
 \begin{equation*}
+\begin{equation}
 1 - F(x) = S(x)   
 \addtocounter{neq}{1}
 \end{equation*}
