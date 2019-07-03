@@ -22,9 +22,16 @@
 
 \input{Trabajo-Final-concordance}
 
-\chapter{Presentaci\'on}
 
 \chapter{Introducci\'on}
+
+Los eventos que desencadenan las activaciones de los seguros o de las decisiones repecto a las políticas de los mismos tienen como variables fundamentales la edad y el tiempo de vida restantes, ambas son de naturaleza aleatoria y conforme las tablas de vida que son reguladas por ley y por organismos gubernamentales, para el caso del Perú es la Superintendencia de Banca y Seguros, SBS, los datos están registrados en forma discreta, en valores enteros para ser precisos.
+
+
+Lo anterior plantea un problema entre las tablas de naturaleza discreta y la variable aleatoria que es de naturaleza continua, el estudio de este problema se conoce en estadística acturial como Edad Fraccional o en inglés Fractional Age Asumptions (FAA) y lo que plantea son formas de salvar este problema que pudiera entenderse como supuestos para interpolar datos y sus implicancias en la determinación de las probabilidades y posteriormente con los ajustes de las fórmulas para las anualidades y seguros.
+
+
+En el presente trabajo nos centraremos en revisar los supuestos de la Edad Fracional y en la determinación de las probabilidades y revisaremos los tres principales supuestos distribución uniforme de muertes (UDD), fuerza de mortalidad constante y el supuesto de Balducci.
 
 \chapter{Marco Te\'orico}
 
@@ -42,7 +49,7 @@ Las tablas de vida generalmente muestra el n\'umero de personas vivas a edades e
 
 \subsection{Distribuci\'on Uniforme de Muertes (UDD)}
 
-\paragraph{Primer supuesto : \textit{Distribuci\'on Uniforme de las muertes.}} \cite{UDD2015} Asume que la distribuci\'on uniforme de muertes sigue una distribuci\'on uniforme en cada a\~no, su abreviaci\'on es UDD (Uniform distribution of deaths). Puede ser visto como una regresi\'on lineal.
+\paragraph{Primer supuesto : \textit{Distribuci\'on Uniforme de las muertes.}} \cite{UDD2015} Asume que la distribuci\'on de supervivencia es lineal entre cada par de a\~nos enteros, su abreviaci\'on es UDD (Uniform distribution of deaths). Puede ser visto como una regresi\'on lineal.
 
 Asumiendo UDD , tomamos un variable t que tiene valores definidos entre 0 y 1, es decir $0 \leq t < 1 $ , entonces representamos el valor de $l_{x+t}$ como:
 
@@ -170,7 +177,7 @@ Procedemos a integrar entre $x_0 < X < x_0 + t$ :
 \addtocounter{neq}{1}
 \end{equation}
 
-\paragraph{Segundo supuesto : \textit{Fuerza de Mortalidad Constante}.}El  supuesto consiste en que la fuerza de mortalidad  $\mu$ se mantiene constante entre un rango de edades exactas; es decir para una edad exacta $x_o$, se tiene una variable X dentro de un rango de $x_0 \leq X < x_0 + t $ donde la fuerza de mortalidad no cambia. Lo anterior significa que la fuerza de mortalidad $\mu_{x_0}$ no depende del valor de t siempre y cuando t este entre los rangos de  $0 < t < 1$. A esta Fuerza de Mortalidad constante la vamos a denominar $\mu_x^*$. \\ 
+\paragraph{Segundo supuesto : \textit{Fuerza de Mortalidad Constante}.}El  supuesto consiste en que la fuerza de mortalidad  $\mu$ se mantiene constante entre dos edades exactas; es decir para una edad exacta $x_o$, se tiene una variable X dentro de un rango de $x_0 \leq X < x_0 + t $ donde la fuerza de mortalidad no cambia. Lo anterior significa que la fuerza de mortalidad $\mu_{x_0}$ no depende del valor de t siempre y cuando t este entre los rangos de  $0 < t < 1$. A esta Fuerza de Mortalidad constante la vamos a denominar $\mu_x^*$. \\ 
 
 En la ecuaci\'on  \ref{eqn:ecFuerzaMortalidad} aplicamos el segundo supuesto 
 
@@ -229,9 +236,256 @@ ln(S(x_0+t))
 
 \subsection{Supuesto Balducci}
 
+En este supuesto se asume que la recíproca de la función de supervivencia es lineal entre dos edades enteras contiguas, tenemos así:
+
+
+
+\begin{equation}
+\label{eqn:ecRegresionLinealSx}
+S(x+t)^{-1} = (1-t)S(x)^{-1} +  t*S(x+1)^{-1} 
+\addtocounter{neq}{1}
+\end{equation}
+
+en notación actuarial tendremos:
+
+\begin{equation}
+_tp_q = p_x / ( 1 - (1 - t)q_x)
+\end{equation}
+
+y para la fuerza de mortalidad
+
+\begin{equation}
+\mu_{x+t} = q_x / ( 1 - (1-t)q_x)
+\end{equation}
+
+\section{Resumen de F\'ormulas}
+
+En la siguiente tabla se puede apreciar el resumen de los supuestos de edades fraccionarias: \\ \\
+
+\begin{tabular}{ |p{2cm}|p{4cm}|p{4cm}|p{3cm}|  }
+  \hline
+  \centering Funci\'on & 
+   Distribuci\'on Uniforme & 
+  Fuerza Constante & 
+  Hiperb\'olica \\
+  \hline % line 1
+    \centering $\qx[t]{x}$ &
+    \centering $t\qx{x}$ &
+    \centering $1-\px{x}[t]$ &
+    $\frac{t\qx{x}}{1-(1-t)\qx{x}}$ \\
+  
+  \hline % line 2
+    \centering $\mu(x+t)$  & 
+    \centering $\frac{\qx{x}}{1-t\qx{x}}$ &
+    \centering $log(\px{x})$ &
+    $\frac{\qx{x}}{1-(1-t)\qx{x}}$ \\
+  
+  \hline % line 3
+    \centering $\qx[1-t]{x+t}$ & 
+    \centering $\frac{(1-t)\qx{x}}{1-t\qx{x}}$ & 
+    \centering $1-\px{x}[1-t]$ &  
+    $(1-t)\qx{x}$ \\
+  
+  \hline % line 4
+    \centering $\qx[y]{x+t}$ &
+    \centering $\frac{y\qx{x}}{1-t\qx{x}}$ & 
+    \centering $1-\px{x}[y]$ &  
+    $\frac{y\qx{x}}{1-(1-y-t)\qx{x}}$ \\
+  
+  \hline % line 5
+    \centering $\qx[t]{x}$ & 
+    \centering $1-t\qx{x}$ & 
+    \centering $\px{x}[t]$ &  
+    $\frac{\px{x}}{1-(1-t)\qx{x}}$ \\
+    
+  \hline % line 6
+    \centering $\qx[t]{x}\mu(x+t)$ & 
+    \centering $\qx{x}$ & 
+    \centering $-\px{x}[t]log(\px{x})$ &  
+    $\frac{\qx{x}\px{x}}{[1-(1-t)\qx{x}]^2}$ \\
+  \hline
+\end{tabular}
+
+
+
 \chapter{Aplicaci\'on}
 
+
+Preparamos el entorno de trabajo cargando:
+
+El paquete lifecontingencies
+La tabla de vida de la SBS
+
+
+\begin{Schunk}
+\begin{Sinput}
+> # Preparamos entorno para trabajar 
+> #-------------------------------------------------------
+> 
+> # Cargamos biblioteca de funciones para Tablas de vida
+> 
+> options(scipen=999) # para evitar la notación científica
+> library(lifecontingencies)
+> TablaSBS = read.table("TMSPP2017.txt",T)
+> # Revisamos data cargada
+> head(TablaSBS)
+\end{Sinput}
+\begin{Soutput}
+  x  SPPS2017H  SPPS2017M  SPPI2017H  SPPI2017M  AaxH  AaxM
+1 0 0.00839770 0.00610297 0.02943100 0.02098114 0.036 0.042
+2 1 0.00158542 0.00103173 0.00615344 0.00392810 0.036 0.042
+3 2 0.00129897 0.00082895 0.00507403 0.00317632 0.036 0.042
+4 3 0.00104859 0.00065435 0.00412794 0.00252685 0.036 0.042
+5 4 0.00083367 0.00050689 0.00331398 0.00197655 0.036 0.042
+6 5 0.00068023 0.00040828 0.00282181 0.00168331 0.027 0.029
+\end{Soutput}
+\begin{Sinput}
+> 
+\end{Sinput}
+\end{Schunk}
+
+Ejemplo 1
+
+Calcule la probabilidad de que, en el año 2019, un hombre sano
+de 33 años fallezca pasado 6 meses de su cumpleaños.
+
+\begin{Schunk}
+\begin{Sinput}
+> # Plateamiento nos piden 0.5q33 para la tabla de vida del 2018
+> t <- 0.5
+> x <- 33
+> # Creamos una tabla de vida para HS2018
+> 
+> 
+> HS2019  = probs2lifetable(probs = TablaSBS$SPPS2017H * (1 - TablaSBS$AaxH)^(2), 
++                           radix = 10^6,   
++                           type = "qx",  
++                           name = "HS2019")
+> # por defecto la función qxt asume fractional = lineal
+> qxt_r <- numeric(3)
+> qxt_calculado <- numeric(3)
+> qxt_metodos <- c("UDD", "fuerza constante", "hiperbólica")
+> # Valores de las funciones de R del paquete LifeContingencies
+> qxt_r[1] <- qxt(HS2019, x=x, t=t)
+> qxt_r[2] <- qxt(HS2019, x=x, t=t, fractional = "constant force")
+> qxt_r[3] <- qxt(HS2019, x=x, t=t, fractional = "hyperbolic")
+> # Probemos con las fórmulas fraccionales
+> #------------------------------------------------
+> 
+> # UDD
+> qxt_calculado[1] <- t * qxt(HS2019, x=x, t=1) 
+> # Fuerza constante
+> qxt_calculado[2] <- 1 - pxt(HS2019, x=x, t=1)^(t) 
+> #Hiperbólica
+> qxt_calculado[3] <- t * qxt(HS2019, x=x, t=1) / (1 - (1-t)* qxt(HS2019, x=x, t=1)) 
+> df_resultados <- data.frame(calculado = qxt_calculado,
++                             r = qxt_r,
++                             var_porc = (qxt_calculado / qxt_r - 1) * 100)
+> row.names(df_resultados) <- qxt_metodos
+> df_resultados
+\end{Sinput}
+\begin{Soutput}
+                    calculado            r              var_porc
+UDD              0.0004920478 0.0004920478 -0.000000000011279866
+fuerza constante 0.0004921690 0.0004921690  0.000000000000000000
+hiperbólica      0.0004922901 0.0004922901  0.000000000004063416
+\end{Soutput}
+\begin{Sinput}
+> 
+\end{Sinput}
+\end{Schunk}
+
+Conclusión
+
+La probabilidad de que un hombre de 33 años fallezca a los 6 meses de su cumpleaños es de 0.00049
+
+Se aprecia que no existe diferencia significativa entre los 3 métodos calcudos y tampoco con los que calcule el R utilizando el paquete lifecontingecies
+
+
+Ejemplo 2
+
+Analice las diferencias entre las probabilidades de que un hombre se mantenga vivo con los los métodos calculados para un hombre sano de 60 años haciendo intervalos mensuales.
+
+\begin{Schunk}
+\begin{Sinput}
+> # En este caso prepararemos un dataframe con 12 elementos 
+> 
+> x <- 60
+> t_semanal <- seq(from=0, to= 365, by = 30) / 365
+> udd_sem <- 1 - t_semanal * qxt(HS2019, x=x, t=1)
+> fuerza_constante_sem <- pxt(HS2019, x=x, t=1)^t_semanal
+> hiperbolica_sem <-  pxt(HS2019, x=x, t=1) / (1 - (1-t_semanal)*qxt(HS2019, x=x, t=1))
+> df_semanal <- data.frame(udd_sem, fuerza_constante_sem, hiperbolica_sem)
+> summary(df_semanal)
+\end{Sinput}
+\begin{Soutput}
+    udd_sem       fuerza_constante_sem hiperbolica_sem 
+ Min.   :0.9951   Min.   :0.9951       Min.   :0.9951  
+ 1st Qu.:0.9963   1st Qu.:0.9963       1st Qu.:0.9963  
+ Median :0.9975   Median :0.9975       Median :0.9975  
+ Mean   :0.9975   Mean   :0.9975       Mean   :0.9975  
+ 3rd Qu.:0.9988   3rd Qu.:0.9988       3rd Qu.:0.9988  
+ Max.   :1.0000   Max.   :1.0000       Max.   :1.0000  
+\end{Soutput}
+\begin{Sinput}
+> plot(t_semanal, 
++      df_semanal$udd_sem, 
++      type="l", 
++      col="blue", 
++      lwd=2, 
++      x_lim = c(0.995, 1), 
++      main="Comparación de modelos",
++      sub = "Hombre de 60 años",
++      xlab="años",
++      ylab = "pxt")
+> lines(t_semanal, 
++       df_semanal$fuerza_constante_sem,
++       col = "red")
+> lines(t_semanal, 
++       df_semanal$hiperbolica_sem,
++       col = "green")
+> legend("topright", legend=qxt_metodos,
++         col=c("blue", "red", "green"), lty=1,cex=0.8)
+> df_semanal
+\end{Sinput}
+\begin{Soutput}
+     udd_sem fuerza_constante_sem hiperbolica_sem
+1  1.0000000            1.0000000       1.0000000
+2  0.9995890            0.9995881       0.9995871
+3  0.9991781            0.9991764       0.9991746
+4  0.9987671            0.9987648       0.9987624
+5  0.9983561            0.9983534       0.9983506
+6  0.9979452            0.9979421       0.9979391
+7  0.9975342            0.9975311       0.9975280
+8  0.9971233            0.9971202       0.9971171
+9  0.9967123            0.9967095       0.9967067
+10 0.9963013            0.9962989       0.9962965
+11 0.9958904            0.9958885       0.9958867
+12 0.9954794            0.9954783       0.9954772
+13 0.9950684            0.9950683       0.9950681
+\end{Soutput}
+\begin{Sinput}
+> 
+> 
+\end{Sinput}
+\end{Schunk}
+
+
+
+
 \chapter{Conclusiones}
+
+\begin{itemize}
+\item Los métodos de edad fraccionaria convergen en sus interpolaciones. La gráfica de comparación de modelos en el tiempo de 1 año para secuencias mensuales en el cálculo del pxt para un hombre de 60 años practicamente se superponían.
+
+\item El paquete lifecontingencies incorpora los tres métodos estudiados.
+
+\item El esquema de edades fraccionales también se pueden incorporar a los seguros y anualidades.
+
+\item Se pueden aplicar más métodos de interpolación, sin embargo, y dado la convergencia en el tiempo de 1 año hace que la utilidad del mismo sea reducida.
+
+\end{itemize}
+
 
 
 \printbibliography[
