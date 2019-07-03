@@ -43,15 +43,62 @@ Las tablas de vida generalmente muestra el n\'umero de personas vivas a edades e
 \subsection{Distribuci\'on Uniforme de Muertes (UDD)}
 
 \paragraph{Primer supuesto : \textit{Distribuci\'on Uniforme de las muertes.}}
-Asume que la distribuci\'on uniforme de muertes sigue una regresi\'on lineal.
 
-%Un supuesto común es el de una Distribución Uniforme de Muertes (UDD) en cada año de edad. Bajo este supuesto, {\ displaystyle \, l_ {x + t}} \, l _ {{x + t}} es una interpolación lineal entre {\ displaystyle \, l_ {x}} \, l_x y {\ displaystyle \, l_ {x + 1}} \, l _ {{x + 1}}. es decir
+Asume que la distribuci\'on uniforme de muertes sigue una distribuci\'on uniforme en cada a\~no, su abreviaci\'on es UDD (Uniform distribution of deaths). Puede ser visto como una regresi\'on lineal. \\
 
+Asumiendo UDD , tomamos un variable t que tiene valores definidos entre 0 y 1, es decir $0 \leq t < 1 $ , entonces representamos el valor de $l_{x+t}$ como:
 
+\begin{equation}
+\label{eqn:ecRegresionLinealLx}
+l_{x+t} = l_x - m*t
+\addtocounter{neq}{1}
+\end{equation}
 
+Donde m es la pendiente de la regresi\'on lineal. Para calcular m usamos el supuesto de UDD, entonces en la ecuaci\'on \ref{eqn:ecRegresionLinealLx} para $t=1$ tenemos:
 
+\begin{equation*}
+l_{x+1} = l_x - m  =>  m = l_x - l_{x+1} 
+\addtocounter{neq}{1}
+\end{equation*}
+     
+aplicandolo a la ecuaci\'on \ref{eqn:ecRegresionLineal} tendriamos
 
-\subsection{Fuerza de Mortalidad constante}
+\begin{equation*}
+l_{x+t} = l_x - t(l_x - l_{x+1}) 
+\addtocounter{neq}{1}
+\end{equation*}
+
+\begin{equation}
+l_{x+t} = (1-t)l_x +  t*l_{x+1} 
+\addtocounter{neq}{1}
+\end{equation}
+
+si dividimos todo entre $l_{0}$
+
+\begin{equation*}
+\frac{l_{x+t}}{l_0} = (1-t)\frac{l_x}{l_0} +  t*\frac{l_{x+1}}{l_0} 
+\addtocounter{neq}{1}
+\end{equation*}
+
+recordando que 
+
+\begin{equation*}
+S(x) = \frac{l_{x}}{l_0} 
+\addtocounter{neq}{1}
+\end{equation*}
+
+\begin{equation*}
+S(x+t) = \frac{l_{x+t}}{l_0} 
+\addtocounter{neq}{1}
+\end{equation*}
+
+\begin{equation}
+\label{eqn:ecRegresionLinealSx}
+S(x+t) = (1-t)S(x) +  t*S(x+1) 
+\addtocounter{neq}{1}
+\end{equation}
+
+\subsection{Fuerza de Mortalidad Constante}
 
 Partamos de la definici\'on de fuerza de mortalidad: \cite{TheForceOfMortality2013} "\textit{En estad\'istica actuarial representa la tasa de mortalidad instantanea a una cierta edad dentro una base anualizada}"
 
