@@ -21,6 +21,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Aplicaci\'on}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusiones}{12}% 
+\contentsline {paragraph}{Preparaci\'on del entorno de trabajo.}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliograf\'ia}{13}% 
+\contentsline {section}{\numberline {3.1}Ejemplo 1}{9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Enunciado.}{9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Conclusi\'on}{10}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Ejemplo 2}{10}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Conclusiones}{13}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliograf\'ia}{14}% 

@@ -307,15 +307,13 @@ En la siguiente tabla se puede apreciar el resumen de los supuestos de edades fr
 \end{tabular}
 
 
-
 \chapter{Aplicaci\'on}
 
-
-Preparamos el entorno de trabajo cargando:
-
-El paquete lifecontingencies
-La tabla de vida de la SBS
-
+\paragraph{Preparaci\'on del entorno de trabajo.}Se realizan las siguientes tareas:
+\begin{itemize}
+\item El paquete lifecontingencies
+\item La tabla de vida de la SBS
+\end{itemize}
 
 \begin{Schunk}
 \begin{Sinput}
@@ -344,8 +342,10 @@ La tabla de vida de la SBS
 \end{Sinput}
 \end{Schunk}
 
-Ejemplo 1
 
+
+\section{Ejemplo 1}
+\paragraph{Enunciado.}
 Calcule la probabilidad de que, en el año 2019, un hombre sano
 de 33 años fallezca pasado 6 meses de su cumpleaños.
 
@@ -395,14 +395,12 @@ hiperbólica      0.0004922901 0.0004922901  0.000000000004063416
 \end{Sinput}
 \end{Schunk}
 
-Conclusión
-
+\paragraph{Conclusi\'on}
 La probabilidad de que un hombre de 33 años fallezca a los 6 meses de su cumpleaños es de 0.00049
 
 Se aprecia que no existe diferencia significativa entre los 3 métodos calcudos y tampoco con los que calcule el R utilizando el paquete lifecontingecies
 
-
-Ejemplo 2
+\section{Ejemplo 2}
 
 Analice las diferencias entre las probabilidades de que un hombre se mantenga vivo con los los métodos calculados para un hombre sano de 60 años haciendo intervalos mensuales.
 
@@ -466,9 +464,9 @@ Analice las diferencias entre las probabilidades de que un hombre se mantenga vi
 \end{Soutput}
 \begin{Sinput}
 > 
-> 
 \end{Sinput}
 \end{Schunk}
+\includegraphics{Trabajo-Final-003}
 
 
 
@@ -477,13 +475,9 @@ Analice las diferencias entre las probabilidades de que un hombre se mantenga vi
 
 \begin{itemize}
 \item Los métodos de edad fraccionaria convergen en sus interpolaciones. La gráfica de comparación de modelos en el tiempo de 1 año para secuencias mensuales en el cálculo del pxt para un hombre de 60 años practicamente se superponían.
-
 \item El paquete lifecontingencies incorpora los tres métodos estudiados.
-
 \item El esquema de edades fraccionales también se pueden incorporar a los seguros y anualidades.
-
 \item Se pueden aplicar más métodos de interpolación, sin embargo, y dado la convergencia en el tiempo de 1 año hace que la utilidad del mismo sea reducida.
-
 \end{itemize}
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.6.29)  3 JUL 2019 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.6.29)  3 JUL 2019 16:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -788,25 +788,31 @@ Overfull \hbox (45.51062pt too wide) in paragraph at lines 265--308
 
 [6] [7]
 Cap\'{\i }tulo 3.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 321.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 319.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 ) [8
 
 ] [9] [10]
-[11]
+<Trabajo-Final-003.pdf, id=53, 433.62pt x 433.62pt>
+File: Trabajo-Final-003.pdf Graphic file (type pdf)
+<use Trabajo-Final-003.pdf>
+Package pdftex.def Info: Trabajo-Final-003.pdf  used on input line 469.
+(pdftex.def)             Requested size: 312.00119pt x 312.01428pt.
+
+[11] [12 <./Trabajo-Final-003.pdf>]
 Cap\'{\i }tulo 4.
-[12
+[13
 
 ]
 
-Package biblatex Warning: Type 'article' not found on input line 496.
+Package biblatex Warning: Type 'article' not found on input line 490.
 
 
-LaTeX Warning: Empty bibliography on input line 496.
+LaTeX Warning: Empty bibliography on input line 490.
 
-[13
+[14
 
 ] (./Trabajo-Final.aux (./includes/portada.aux)
 LaTeX Info: Redefining \sptext on input line 14.
@@ -824,10 +830,10 @@ Package logreq Info: Writing requests to 'Trabajo-Final.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11849 strings out of 492616
- 195086 string characters out of 6129481
+ 11854 strings out of 492616
+ 195234 string characters out of 6129481
  477438 words of memory out of 5000000
- 15542 multiletter control sequences out of 15000+600000
+ 15546 multiletter control sequences out of 15000+600000
  50689 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,15n,45p,802b,1855s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -846,10 +852,10 @@ l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
 texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/t
 exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/tex
 live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Trabajo-Final.pdf (14 pages, 246924 bytes).
+Output written on Trabajo-Final.pdf (15 pages, 251767 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 122 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 10 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 15 words of extra memory for PDF output out of 10000 (max. 10000000)
 

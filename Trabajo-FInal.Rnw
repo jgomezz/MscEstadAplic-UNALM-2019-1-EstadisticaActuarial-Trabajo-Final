@@ -306,15 +306,13 @@ En la siguiente tabla se puede apreciar el resumen de los supuestos de edades fr
 \end{tabular}
 
 
-
 \chapter{Aplicaci\'on}
 
-
-Preparamos el entorno de trabajo cargando:
-
-El paquete lifecontingencies
-La tabla de vida de la SBS
-
+\paragraph{Preparaci\'on del entorno de trabajo.}Se realizan las siguientes tareas:
+\begin{itemize}
+\item El paquete lifecontingencies
+\item La tabla de vida de la SBS
+\end{itemize}
 
 <<>>=
 
@@ -334,8 +332,10 @@ head(TablaSBS)
 
 @
 
-Ejemplo 1
 
+
+\section{Ejemplo 1}
+\paragraph{Enunciado.}
 Calcule la probabilidad de que, en el año 2019, un hombre sano
 de 33 años fallezca pasado 6 meses de su cumpleaños.
 
@@ -390,18 +390,16 @@ df_resultados
 
 @
 
-Conclusión
-
+\paragraph{Conclusi\'on}
 La probabilidad de que un hombre de 33 años fallezca a los 6 meses de su cumpleaños es de 0.00049
 
 Se aprecia que no existe diferencia significativa entre los 3 métodos calcudos y tampoco con los que calcule el R utilizando el paquete lifecontingecies
 
-
-Ejemplo 2
+\section{Ejemplo 2}
 
 Analice las diferencias entre las probabilidades de que un hombre se mantenga vivo con los los métodos calculados para un hombre sano de 60 años haciendo intervalos mensuales.
 
-<<>>=
+<< fig=TRUE >>=
 
 # En este caso prepararemos un dataframe con 12 elementos 
 
@@ -445,7 +443,6 @@ legend("topright", legend=qxt_metodos,
 
 df_semanal
 
-
 @
 
 
@@ -455,13 +452,9 @@ df_semanal
 
 \begin{itemize}
 \item Los métodos de edad fraccionaria convergen en sus interpolaciones. La gráfica de comparación de modelos en el tiempo de 1 año para secuencias mensuales en el cálculo del pxt para un hombre de 60 años practicamente se superponían.
-
 \item El paquete lifecontingencies incorpora los tres métodos estudiados.
-
 \item El esquema de edades fraccionales también se pueden incorporar a los seguros y anualidades.
-
 \item Se pueden aplicar más métodos de interpolación, sin embargo, y dado la convergencia en el tiempo de 1 año hace que la utilidad del mismo sea reducida.
-
 \end{itemize}
 
 
