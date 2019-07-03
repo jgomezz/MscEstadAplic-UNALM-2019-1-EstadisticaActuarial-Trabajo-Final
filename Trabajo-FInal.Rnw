@@ -349,7 +349,8 @@ x <- 33
 # Creamos una tabla de vida para HS2018
 
 
-HS2019  = probs2lifetable(probs = TablaSBS$SPPS2017H * (1 - TablaSBS$AaxH)^(2), 
+HS2019  = probs2lifetable(probs = 
+                            TablaSBS$SPPS2017H*(1-TablaSBS$AaxH)^2, 
                           radix = 10^6,   
                           type = "qx",  
                           name = "HS2019")
@@ -376,13 +377,11 @@ qxt_calculado[1] <- t * qxt(HS2019, x=x, t=1)
 qxt_calculado[2] <- 1 - pxt(HS2019, x=x, t=1)^(t) 
 
 #Hiperbólica
-qxt_calculado[3] <- t * qxt(HS2019, x=x, t=1) / (1 - (1-t)* qxt(HS2019, x=x, t=1)) 
+qxt_calculado[3] <- t*qxt(HS2019,x=x,t=1)/(1-(1-t)*qxt(HS2019,x=x,t=1)) 
 
 df_resultados <- data.frame(calculado = qxt_calculado,
                             r = qxt_r,
-                            var_porc = (qxt_calculado / qxt_r - 1) * 100)
-
-
+                            var_porc = (qxt_calculado/qxt_r-1)*100)
 
 row.names(df_resultados) <- qxt_metodos
 
@@ -411,7 +410,7 @@ udd_sem <- 1 - t_semanal * qxt(HS2019, x=x, t=1)
   
 fuerza_constante_sem <- pxt(HS2019, x=x, t=1)^t_semanal
 
-hiperbolica_sem <-  pxt(HS2019, x=x, t=1) / (1 - (1-t_semanal)*qxt(HS2019, x=x, t=1))
+hiperbolica_sem <- pxt(HS2019,x=x,t=1)/(1-(1-t_semanal)*qxt(HS2019,x=x,t=1))
 
 df_semanal <- data.frame(udd_sem, fuerza_constante_sem, hiperbolica_sem)
 
@@ -456,7 +455,6 @@ df_semanal
 \item El esquema de edades fraccionales también se pueden incorporar a los seguros y anualidades.
 \item Se pueden aplicar más métodos de interpolación, sin embargo, y dado la convergencia en el tiempo de 1 año hace que la utilidad del mismo sea reducida.
 \end{itemize}
-
 
 
 \printbibliography[
