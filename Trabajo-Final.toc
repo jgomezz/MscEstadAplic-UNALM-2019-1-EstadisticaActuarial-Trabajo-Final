@@ -9,7 +9,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Supuestos de las Edades Fraccionarias}{4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}Distribuci\'on Uniforme de las muertes}{4}% 
+\contentsline {subsection}{\numberline {3.1.1}Distribuci\'on Uniforme de Muertes (UDD)}{4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Primer supuesto : \textit {Distribuci\'on Uniforme de las muertes.}}{4}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.2}Fuerza de Mortalidad constante}{4}% 
 \defcounter {refsection}{0}\relax 

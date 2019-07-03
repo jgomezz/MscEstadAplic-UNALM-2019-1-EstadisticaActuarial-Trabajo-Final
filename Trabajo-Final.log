@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.6.29)  2 JUL 2019 22:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.6.29)  2 JUL 2019 23:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -768,7 +768,7 @@ Cap\'{\i }tulo 3.
 [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
@@ -782,10 +782,10 @@ Cap\'{\i }tulo 5.
 
 ]
 
-Package biblatex Warning: Type 'article' not found on input line 178.
+Package biblatex Warning: Type 'article' not found on input line 196.
 
 
-LaTeX Warning: Empty bibliography on input line 178.
+LaTeX Warning: Empty bibliography on input line 196.
 
 [9
 
@@ -802,10 +802,10 @@ Package logreq Info: Writing requests to 'Trabajo-Final.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11813 strings out of 492616
- 194458 string characters out of 6129481
- 470438 words of memory out of 5000000
- 15513 multiletter control sequences out of 15000+600000
+ 11814 strings out of 492616
+ 194463 string characters out of 6129481
+ 471438 words of memory out of 5000000
+ 15514 multiletter control sequences out of 15000+600000
  49708 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  35i,6n,45p,802b,1855s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -822,7 +822,7 @@ l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
 exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
 xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb>
-Output written on Trabajo-Final.pdf (10 pages, 204183 bytes).
+Output written on Trabajo-Final.pdf (10 pages, 207223 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream
