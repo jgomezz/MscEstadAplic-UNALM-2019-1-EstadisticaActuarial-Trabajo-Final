@@ -47,5 +47,28 @@
     \field{title}{"Actuarial Mathematics for Life Contingent - Second Edition"}
     \field{year}{"2013"}
   \endentry
+
+  \entry{UDD2015}{book}{}
+    \name{author}{1}{}{%
+      {{hash=PSD}{%
+         family={Promislow"},
+         familyi={P\bibinitperiod},
+         given={"S.\bibnamedelima David},
+         giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {"John Wiley Sons, Ltd"}%
+    }
+    \strng{namehash}{PSD1}
+    \strng{fullhash}{PSD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{pages}{"102"}
+    \field{title}{"Fundamentals of Actuarial Mathematics - Third Edition"}
+    \field{year}{"2015"}
+  \endentry
 \enddatalist
 \endinput
